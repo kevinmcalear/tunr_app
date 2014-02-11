@@ -1,0 +1,44 @@
+<form class="form" action="/users" method="POST">
+    <h1>Start Your Account</h1>
+    <a href="/">Go Back</a>
+  </div>
+  <br>
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <p>
+  <label>
+    <input class="input" type="text" name="first_name" placeholder="First Name" />
+  </label>
+
+  <label>
+    <input class="input" type="text" name="last_name" placeholder="Last Name" />
+  </label>
+   </p>
+
+   <p>
+    <label>
+      <input  class="input" type="date" name="date_of_birth" placeholder="Your Birthday"/>
+    </label>
+ 
+    <label>
+      <input  class="input" type="text" name="sex" placeholder="Sex? ;)" />
+    </label>
+  </p>
+
+  <p>
+    <label>
+      <input  class="input" type="email" name="email" placeholder="Your Email" />
+    </label>
+
+    <label>
+      <input  class="input" type="text" name="facebook_link" placeholder="Your Facebook" />
+    </label>
+  </p>
+
+  <p>
+    <label>
+      <input  class="input" type="password" name="password" placeholder="Your Password" />
+    </label>
+  </p>
+     
+  <button class="button">Create Account!</button>
+</form>

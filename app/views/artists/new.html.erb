@@ -1,0 +1,24 @@
+<form class="form" action="/artists" method="POST">
+    <h1>Add A New Artits</h1>
+    <a href="/artists">Go Back Home</a>
+  </div>
+  <br>
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <label>
+    <input class="input" type="text" name="name" placeholder="Artist's Name" />
+  </label>
+   
+   <p>
+    <label>
+      <input  class="input" type="text" name="genre" placeholder="Artist's Genre"/>
+    </label>
+  </p> 
+
+  <p>
+    <label>
+      <input  class="input" type="text" name="photo_url" placeholder="Artist's Photo URL" />
+    </label>
+  </p>
+     
+  <button class="button">Add Artist</button>
+</form>

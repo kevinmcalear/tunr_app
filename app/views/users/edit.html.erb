@@ -1,0 +1,49 @@
+<form class="form"  action="/users/<%=@user.id %>" method="POST">
+
+<div class="top">
+  <h1>Edit This user</h1>
+  <a href="/users/<%= params[:id] %>">Go Back</a>
+</div>
+<br>
+  <input type="hidden" name="_method" value="patch">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <label>
+
+<p>
+  <label>
+    <input class="input" type="text" name="first_name" value="<%= @user.first_name %>" />
+  </label>
+
+  <label>
+    <input class="input" type="text" name="last_name" value="<%= @user.last_name %>" />
+  </label>
+   </p>
+
+   <p>
+    <label>
+      <input  class="input" type="date" name="date_of_birth" value="<%= @user.date_of_birth %>"/>
+    </label>
+ 
+    <label>
+      <input  class="input" type="text" name="sex" value="<%= @user.sex %>" />
+    </label>
+  </p>
+
+  <p>
+    <label>
+      <input  class="input" type="email" name="email" value="<%= @user.email %>" />
+    </label>
+
+    <label>
+      <input  class="input" type="text" name="facebook_link" value="<%= @user.facebook_link %>" />
+    </label>
+  </p>
+
+  <p>
+    <label>
+      <input  class="input" type="password" name="password" />
+    </label>
+  </p>
+
+  <button class="button">Update user</button>
+</form>

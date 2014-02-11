@@ -1,0 +1,24 @@
+<form class="form"  action="/artists/<%=@artist.id %>" method="POST">
+
+<div class="top">
+  <h1>Edit This Artist</h1>
+  <a href="/artists/<%=@artist.id %>">Go Back</a>
+</div>
+<br>
+  <input type="hidden" name="_method" value="patch">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <label>
+    <input class="input" type="text" name="name" value="<%= @artist.name %>" />
+  </label>
+  <p>
+  <label>
+    <input  class="input" type="integer" name="genre" value="<%= @artist.genre %>" />
+  </label>
+  </p>  
+  <p>
+  <label>
+    <input  class="input" type="text" name="photo_url" value="<%= @artist.photo_url %>" />
+  </label>
+  </p>  
+  <button class="button">Update Artist</button>
+</form>
